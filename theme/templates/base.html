@@ -1,0 +1,487 @@
+{% load static tailwind_tags %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>WAZZA INK TATTO</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+    {% block header %}
+    
+    {% endblock %}
+    <script src="{% static 'js/datetimepick.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/datetimepick.css' %}">
+    <script src="{% static 'js/alpine.js' %}" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'js/base.js'%}" defer></script>
+	</head>
+
+	<body class="w-screen font-serif bg-[url('/static/images/background.webp')] bg-fixed bg-center md:bg-cover overflow-auto">
+		
+		
+
+		<div  class="z-20 w-full bg-gradient-to-r from-black to-red-700/30">
+            <div class="
+          flex flex-col
+          max-w-screen-xl
+          p-5
+          mx-auto
+          md:items-center md:justify-between md:flex-row md:px-6
+          lg:px-8
+        ">
+              <div class="z-20 flex flex-row items-center justify-between lg:justify-start opacity-100">
+                <a href="/" class="
+              text-lg
+              font-bold
+              tracking-tighter
+              text-red-700
+              transition
+              duration-500
+              ease-in-out
+              transform
+              tracking-relaxed
+              lg:pr-8
+            "> WAZZA INK TATTOO </a>
+                <button id="navbar_btn" class="rounded-lg md:hidden focus:outline-none focus:shadow-outline">
+                  <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8">
+                    <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                    <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none"></path>
+                  </svg>
+                </button>
+              </div>
+              <nav class="flex-col items-center flex-grow hidden pb-4 border-red-700 md:pb-0 md:flex md:justify-end md:flex-row lg:border-l-2 lg:pl-2">
+                <a class="
+              px-4
+              py-2
+              mt-2
+              text-sm text-white
+              md:mt-0
+              hover:text-red-500
+              focus:outline-none focus:shadow-outline
+            " href="{% url 'home:about'%}">Despre</a>
+                <a class="
+              px-4
+              py-2
+              mt-2
+              text-sm text-white
+              md:mt-0
+              hover:text-red-500
+              focus:outline-none focus:shadow-outline
+            " href="{% url 'home:portofoliu' %}">Portofoliu</a>
+			<a class="
+              px-4
+              py-2
+              mt-2
+              text-sm text-white
+              md:mt-0
+              hover:text-red-500
+              focus:outline-none focus:shadow-outline
+            " href="{% url 'home:info' %}">Info</a>
+            <a class="
+            px-4
+            py-2
+            mt-2
+            text-sm text-white
+            md:mt-0
+            hover:text-red-500
+            focus:outline-none focus:shadow-outline
+          " href="{% url 'home:rezervare' %}">Rezervare</a>
+                
+              </nav>
+            </div>
+              <div id="navbar" class="z-10 absolute w-full text-center transform -translate-y-full duration-500 ease-in-out  md:hidden h-48 ">
+                  <a class="
+                px-4
+                py-2
+                mt-2
+                text-sm text-white
+                md:mt-0
+                hover:text-red-500
+                focus:outline-none focus:shadow-outline
+              " href="{% url 'home:about'%}">Despre</a>
+                  <a class="
+                px-4
+                py-2
+                mt-2
+                text-sm text-white
+                md:mt-0
+                hover:text-red-500
+                focus:outline-none focus:shadow-outline
+              " href="{% url 'home:portofoliu' %}">Portofoliu</a>
+        <a class="
+                px-4
+                py-2
+                mt-2
+                text-sm text-white
+                md:mt-0
+                hover:text-red-500
+                focus:outline-none focus:shadow-outline
+              " href="{% url 'home:info' %}">Info</a>
+              <a class="
+              px-4
+              py-2
+              mt-2
+              text-sm text-white
+              md:mt-0
+              hover:text-red-500
+              focus:outline-none focus:shadow-outline
+            " href="{% url 'home:rezervare' %}">Rezervare</a>
+              </div>
+          </div>
+
+          <section id="contact" class="hidden text-white bg-gray-700/50 sticky top-0 w-screen h-screen z-10">
+            <div class="container mx-auto items-center px-5 py-12 lg:px-20">
+              <div class="
+            flex flex-col
+            w-full
+            max-w-xl
+            p-10
+            mx-auto
+            my-6
+            transition
+            duration-500
+            ease-in-out
+            transform
+            bg-gray-900
+            rounded-lg
+            md:mt-0
+          ">
+          <div class="flex w-full">
+            <h3 class="text-red-500">Rezervare</h3>
+            <button id="contactBtn" class="absolute right-5 top-9 text-red-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+            </button>
+          
+          </div>
+          
+                <div class="mt-8">
+                  <div class="mt-6">
+                    <form method="POST" enctype="multipart/form-data" class="space-y-6">
+                      {% csrf_token %}
+                      <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                        <div>
+                          <label class="block text-sm font-medium text-neutral-600"> Nume </label>
+                          <div class="mt-1">
+                            {{ form.name }}
+                          </div>
+                        </div>
+                        <div class="space-y-1">
+                          <label class="block text-sm font-medium text-neutral-600"> Email </label>
+                          <div class="mt-1">
+                            {{ form.email }}
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                        <div>
+                          <label class="block text-sm font-medium text-neutral-600"> Telefon </label>
+                          <div class="mt-1">
+                            {{ form.phone }}
+                          </div>
+                        </div>
+                        <div class="space-y-1">
+                          <label class="block text-sm font-medium text-neutral-600"> Data </label>
+          
+                          <div
+              x-data
+              x-init="flatpickr($refs.datetimewidget, {wrap: true, enableTime: true,time_24hr: true , dateFormat: 'j m, Y H:i'});"
+              x-ref="datetimewidget"
+              class="flatpickr container mx-auto col-span-6 sm:col-span-6 mt-5"
+          >
+              <div class="flex align-middle align-content-center">
+                {{ form.date }}
+              </div>
+          
+          </div>
+                        </div>
+                      </div>
+          
+                      <div>
+                        <label class="block text-sm font-medium text-neutral-600"> Descriere </label>
+                        {{ form.description }}
+                      </div>
+          
+                      <div class="space-y-1">
+                        <label class="block text-sm font-medium text-neutral-600"> Incarca o imagine </label>
+                        <div class="mt-1">
+                          {{ form.image}}
+                        </div>
+                      </div>
+          
+                      <div>
+                        <button type="submit" class="
+                      flex
+                      items-center
+                      justify-center
+                      w-full
+                      px-10
+                      py-4
+                      text-base
+                      font-medium
+                      text-center text-white
+                      transition
+                      duration-500
+                      ease-in-out
+                      transform
+                      bg-red-500
+                      rounded-xl
+                      hover:bg-red-700
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-offset-2
+                      focus:ring-blue-500
+                    "> Trimite </button>
+                      </div>
+                    </form>
+                    <div class="relative my-4">
+                      <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-red-500"></div>
+                      </div>
+                      <div class="relative flex justify-center text-sm">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {% block content%}
+
+          <div class="container w-full h-full px-5 py-24 mx-auto lg:px-32 ">
+            <div class="grid lg:flex-row lg:space-x-12">
+              <div class="
+            w-full
+            max-w-screen-lg
+            m-auto
+            
+            lg:w-1/4 lg:order-first
+          ">
+                  <div class="flex py-2 mb-4 justify-center">
+                    <img src="{% static 'images/WAZZA_INK_TATTOO_logo.webp' %}" class="w-96">
+                    
+                  </div>
+                </div>
+              <div class=" px-4 mt-12 lg:px-10 text-white m-4 text-lg bg-black/70">
+                <h1 class="text-red-700 border-b border-red-700 text-2xl p-2">Wazza Ink Tattoo</h1>
+                <p> Va astept intr-o locatie noua, curata, modern si profesional utilata, cu o atmosfera relaxata, deschisa oricui isi doreste un tatuaj corporal la cel mai inalt nivel. Cel mai important de stiut in alegerea salonului de tatuaj este ca Tatuajele si artistii tatuatori nu sunt toti la fel. Imaginea pe care o aveti in minte a rezultatului finit, poate si se transforma intr-un cosmar de multe ori datorita neinspiratiei de a alege un salon de tatuaje bun, cu lucrari pe gustul dvs. Un tatuaj poate inseamna o pata de cerneala pe piele, sau poate insemna arta ce va fi admirata ca un tablou, de care ve-ti fi mandri si peste ani. Modul cel mai bun de alegere a unui salon de tatuaj este rasfoirea portofoliului.</p>
+                <h2 class="text-red-700 border-b border-red-700 text-2xl m-2 p-2">Cum se realizeaza corect un tatuaj!</h2>
+                <p>
+                  Pentru a realiza un tatuaj, un tatuator foloseste un aparat electric ce contine mici tuburi cu cerneala atasate la ace sterilizate. Astfel, se injecteaza cerneala in piele, printr-o serie de mici rani punctate. Totusi, stim ca celulele pielii se regenereaza constant.
+                </p>
+                <p>
+                  <span class="font-bold underline">Atunci cum de un tatuaj este permanent?</span> <br> Pielea are trei straturi: epiderma, derma si hipoderma. Cand este injectata in piele, cerneala se imprastie prin punctul de insertie atat in derma cat si in hipoderma. Astfel, celulele epidermei, cele care se regenereaza, vindeca zona lezata, dar cerneala ramane in straturile inferioare. Derma recunoaste cerneala ca fiind corp strain, insa pentru ca nu se regenereaza precum epiderma, o blocheaza in celule, pentru a nu se imprastia in organism.
+Un tatuaj facut corect nu ajunge in hipoderma, care ofera suport pentru cele doua straturi superioare. Daca cerneala ajunge in hipoderma tatuajul nu va fi indeajuns de vizibil. Pe masura ce inaintezi in varsta, cerneala tatuajului ar putea sa migreze mai adanc in derma, de aceea tatuajul isi va pierde din intensitate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {% endblock %}
+
+		  <footer class="relative bg-gradient-to-r from-black to-red-900/30" aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="px-5 py-12 mx-auto  lg:py-16 md:px-12 lg:px-20">
+              <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                  <a href="/" class="
+                text-lg
+                font-bold
+                tracking-tighter
+                text-red-700
+                transition
+                duration-500
+                ease-in-out
+                transform
+                tracking-relaxed
+                lg:pr-8
+              "> Diaconeasa Cristi </a>
+                  <div id="map" class="w-full mt-2 h-60"></div>
+                  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWX_qkIZidmyPPcN6kZ8kaxs46lKP766o"></script>
+                  <script src="{% static 'js/salon.js'%}"></script>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-10 mt-12 xl:mt-0 xl:col-span-2">
+                  <div class=" flex m-2 w-full">
+                    <div>
+                      <h3 class="
+                    text-xs
+                    font-semibold
+                    tracking-wider
+                    text-red-500
+                    text-center
+                    uppercase
+                  "> Contact </h3>
+                      <ul role="list" class="mt-10 space-y-4 w-full">
+                        <li class="p-2">
+                          <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=44.95587,24.93418&amp;z=20&amp;t=m&amp;hl=ro&amp;gl=US&amp;mapclient=apiv3&amp;cid=6739760268496696986" tabindex="0" class="text-sm font-normal text-white hover:text-red-500 flex text-center">
+                            <div class="flex-1 justify-center"><svg class="text-white h-10 w-full" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            </svg> </div>
+                            <div class="flex-1">
+                              Mioveni, Arges, Str.7 Septembrie 1485, Bl.P19, Sc.A, Parter
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2">
+                          <a href="tel:0741907328" class="text-sm font-normal text-white hover:text-red-500 flex text-center">
+                            <div class="flex-1 justify-center">
+                              <svg class="text-white h-10 w-full" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                                <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                              </svg>
+                          </div>
+                            <div class="flex-1">
+                              0741 907 328
+                            </div>
+                          </a>
+                        </li>
+                        <li class="p-2">
+                          <a href="mailto:ink_tattoo@ymail.com" class="text-sm font-normal text-white hover:text-red-500 flex text-center">
+                            <div class="flex-1 justify-center">
+                              <svg class="text-white h-10 w-full" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882l-6-3.2ZM15 7.383l-4.778 2.867L15 13.117V7.383Zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2Z"/>
+                              </svg>
+                          </div>
+                            <span class="flex-1">
+                              ink_tattoo@ymail.com
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="hidden justify-self-center md:items-center lg:justify-end md:grid md:grid-cols-1">
+                    <div class="w-full mt-12 md:mt-0">
+                      <div class="mt-8 lg:justify-end xl:mt-0">
+                        <h3 class="
+                      text-xs
+                      font-semibold
+                      tracking-wider
+                      text-red-500
+                      uppercase
+                    "> Vrei un tatuaj? </h3>
+                        <p class="mt-4 text-sm text-white lg:ml-auto"> Lasa-mi adresa de email, numarul de telefon si te voi contacta pentru detalii </p>
+                        <div class="inline-flex items-center gap-2 list-none lg:ml-auto ">
+                          <div class="
+                        p-1
+                        mt-4
+                        transition
+                        duration-500
+                        ease-in-out
+                        transform
+                        border2
+                        bg-gray-50
+                        rounded-xl
+                        sm:max-w-lg sm:flex
+                      ">
+                            <div class="flex-1 min-w-0 revue-form-group">
+                              <label for="member_email" class="sr-only">Email address</label>
+                              <input id="cta-email" type="email" class="
+                            block
+                            w-full
+                            px-5
+                            py-3
+                            text-base text-neutral-600
+                            placeholder-gray-300
+                            transition
+                            duration-500
+                            ease-in-out
+                            transform
+                            bg-transparent
+                            border border-transparent
+                            rounded-md
+                            focus:outline-none
+                            focus:border-transparent
+                            focus:ring-2
+                            focus:ring-white
+                            focus:ring-offset-2
+                            focus:ring-offset-red-300
+                          " placeholder="Email" required>
+                            </div>
+                            <div class="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
+                              <button type="submit" value="Subscribe" name="member[subscribe]" id="contact_btn" class="
+                            block
+                            w-full
+                            px-5
+                            py-3
+                            text-base
+                            font-medium
+                            text-white
+                            bg-red-500
+                            border border-transparent
+                            rounded-lg
+                            shadow
+                            hover:bg-red-700
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-white
+                            focus:ring-offset-2
+                            focus:ring-offset-gray-300
+                            sm:px-10
+                          ">Trimite</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="
+          px-5
+          py-12
+          mx-auto
+          sm:px-6
+          md:flex md:items-center md:justify-between
+          lg:px-20
+        ">
+              <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+                <a href="https://www.facebook.com/Diaconeasa.Cristi" class="text-blue-500 hover:text-blue-700">
+                  <span class="sr-only">Facebook</span>
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/wazzainktattoo/" class="text-red-500 hover:text-red-700">
+                  <span class="sr-only">Instagram</span>
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                <a href="https://wa.me/+40741907328" class="text-green-500 hover:text-green-700">
+                  <span class="sr-only">WhatsApp</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="mt-8 md:mt-0 md:order-1">
+                <span class="mt-2 text-sm font-light text-red-500"> Copyright © Diconeasa Cristi <span id="year">2022</span></span>
+                
+              </div>
+            </div>
+          </footer>
+          {% if messages %}
+            {% for message in messages %}
+              {% if message.tags %}
+              <script>
+                Swal.fire({
+                position: 'top-center',
+                icon: '{{ message.tags }}',
+                title: '{{ message }}',
+                showConfirmButton: true,
+                timer: 10000
+              })
+              </script>
+              {% endif %}
+            {% endfor %}
+            {% endif %}
+	</body>
+</html>
