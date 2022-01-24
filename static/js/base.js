@@ -22,3 +22,5 @@ contact_btn.addEventListener("click", function (){
 
 }, false)
 contactBtn.addEventListener("click", function (){contact.classList.add("hidden")})
+
+var year = document.getElementById("year").innerHTML = new Date().getFullYear();
