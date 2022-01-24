@@ -14,7 +14,7 @@ def email_announce():
         for client in clients:
             client_date_rezervation = datetime.strptime(str(client.date), "%Y-%m-%d").strftime("%d-%m-%Y")
             client_msg = ("Sistem", f"Nu uitati ca maine {client_date_rezervation}\n aveti rezervare la ora {client.time}. Pentru orice modificare va rog sa sunati la numarul 0741907328", "inktattoo1992@gmail.com", [client.email])
-            admin_msg = ("Sistem", (f"Nu uitati ca pentru maine aveti programat pe {client.name}. \n http://192.168.1.249:35780/admin/home/clientrezervation/{client.id}/change/"), "inktattoo1992@gmail.com", ["inktattoo1992@gmail.com"])
+            admin_msg = ("Sistem", (f"Nu uitati ca pentru maine aveti programat pe {client.name}. \n http://wazzainktattoo/admin/home/clientrezervation/{client.id}/change/"), "inktattoo1992@gmail.com", ["inktattoo1992@gmail.com"])
             send_mass_mail((client_msg, admin_msg),fail_silently=False)
             print(client)
 

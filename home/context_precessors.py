@@ -78,7 +78,7 @@ def sendrezervation(request):
                                         image = image
                                     )
                                     client_msg = ("Sistem", f"Multumesc pentru rezervare. Va voi contacta in cel mai scurt timp pentru confirmare \nDetali rezrevare: \nNume: {name} \nEmail: {email} \nTelefon: {phone}, \nData: {newdate} \nOra: {newtime}", "inktattoo1992@gmail.com", [email])
-                                    admin_msg = ("Sistem", (f"Aveti un mesaj de la {name}. \nhttp://192.168.1.249:35780/admin/home/clientrezervation/{client.id}/change/ \nTelefon: {phone}"), "inktattoo1992@gmail.com", ["inktattoo1992@gmail.com"])
+                                    admin_msg = ("Sistem", (f"Aveti un mesaj de la {name}. \nhttp://wazzainktattoo/admin/home/clientrezervation/{client.id}/change/ \nTelefon: {phone}"), "inktattoo1992@gmail.com", ["inktattoo1992@gmail.com"])
                                     send_mass_mail((client_msg, admin_msg),fail_silently=False)
                                     print(client_msg)
                                     messages.success(request, "Multumesc pentru rezervare, va voi contacta in cel mai scurt timp")
@@ -102,7 +102,7 @@ def sendrezervation(request):
                                 image = image
                             )
                             client_msg = ("Sistem", f"Multumesc pentru rezervare. Va voi contacta in cel mai scurt timp pentru confirmare \nDetali rezrevare: \nNume: {name} \nEmail: {email} \nTelefon: {phone}, \nData: {newdate} \nOra: {newtime}", "inktattoo1992@gmail.com", [email])
-                            admin_msg = ("Sistem", (f"Aveti un mesaj de la {name}. \nhttp://192.168.1.249:35780/admin/home/clientrezervation/{client.id}/change/ \nTelefon: {phone}"), "inktattoo1992@gmail.com", ["inktattoo1992@gmail.com"])
+                            admin_msg = ("Sistem", (f"Aveti un mesaj de la {name}. \nhttp://wazzainktattoo.ro/admin/home/clientrezervation/{client.id}/change/ \nTelefon: {phone}"), "inktattoo1992@gmail.com", ["inktattoo1992@gmail.com"])
                             send_mass_mail((client_msg, admin_msg),fail_silently=False)
                             print(client_msg)
                             messages.success(request, "Multumesc pentru rezervare, va voi contacta in cel mai scurt timp")
