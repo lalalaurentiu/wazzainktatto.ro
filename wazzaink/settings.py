@@ -73,6 +73,8 @@ INTERNAL_IPS = [
 NPM_BIN_PATH = r"C:\\Nodejs\\npm.cmd"
 # NPM_BIN_PATH = r"/usr/local/bin/npm"
 
+CSRF_TRUSTED_ORIGINS = ['https://*.wazzainktattoo.ro','https://*.127.0.0.1']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
