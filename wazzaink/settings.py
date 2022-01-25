@@ -27,7 +27,7 @@ mimetypes.add_type("text/javascript", ".js", True)
 SECRET_KEY = 'django-insecure-of$*d$10&p@c$+&pl3j^dwbphws(2tij&4%^xlzg&!$teivcf1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     'corsheaders',
+    'django_browser_reload',
 
     #scheduler
     'django_apscheduler',
@@ -70,8 +71,8 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-# NPM_BIN_PATH = r"C:\\Nodejs\\npm.cmd"
-NPM_BIN_PATH = r"/usr/bin/npm"
+NPM_BIN_PATH = r"C:\\Nodejs\\npm.cmd"
+# NPM_BIN_PATH = r"/usr/bin/npm"
 
 CSRF_TRUSTED_ORIGINS = ['https://*.wazzainktattoo.ro','https://*.127.0.0.1']
 
@@ -84,6 +85,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
