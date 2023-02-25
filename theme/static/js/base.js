@@ -15,7 +15,7 @@ function touch_menu(){
     
 };
 
-navbar_btn.addEventListener("click", touch_menu, false);
+// navbar_btn.addEventListener("click", touch_menu, false);
 contact_btn.addEventListener("click", function (){
     contact.classList.remove("hidden");
     document.getElementById("id_email").value = cta_email.value;
@@ -24,3 +24,17 @@ contact_btn.addEventListener("click", function (){
 contactBtn.addEventListener("click", function (){contact.classList.add("hidden")})
 
 var year = document.getElementById("year").innerHTML = new Date().getFullYear();
+
+const observer  = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.replace("opacity-0", "opacity-100");
+        }
+    });
+});
+
+const elements = document.querySelectorAll(".animate");
+elements.forEach(element => {
+    observer.observe(element);
+});
+

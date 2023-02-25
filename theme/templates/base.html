@@ -37,8 +37,7 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body
-  class="w-screen font-serif bg-[url('/static/images/background.webp')] bg-fixed bg-center md:bg-cover overflow-auto ">
+<body class="flex flex-col w-screen overflow-x-hidden font-nanum bg-gray-600">
   {% include 'navbar.html' %}
 
   <section id="contact" class="hidden text-white bg-gray-700/50 sticky top-0 w-screen h-screen z-10">
@@ -161,45 +160,102 @@
   </section>
 
   {% block content%}
+  <div class="h-screen w-screen box-border relative">
+    <video class="h-full w-full object-cover overflow-hidden" autoplay muted>
+      <source src="{% static 'videos/cinematic.mp4' %}" type="video/mp4">
+    </video>
+    <div class="absolute w-full h-full top-9 text-red-900 text-animation text-xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam ea mollitia voluptate numquam voluptatem! Est
+      excepturi ullam ipsam deserunt magnam voluptatum nemo vero, reprehenderit quas voluptatem laboriosam voluptas,
+      obcaecati dolorum?
+    </div>
+  </div>
 
-  <div class="container w-full h-full px-5 py-24 mx-auto lg:px-32 ">
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate">
     <div class="grid lg:flex-row lg:space-x-12">
-      <div class="
-            w-full
-            max-w-screen-lg
-            m-auto
-            
-            lg:w-1/4 lg:order-first
-          ">
-        <div class="flex py-2 mb-4 justify-center">
-          <img src="{% static 'images/WAZZA_INK_TATTOO_logo.webp' %}" class="w-96">
-
-        </div>
-      </div>
-      <div class=" px-4 mt-12 lg:px-10 text-white m-4 text-lg bg-black/70">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-lg bg-black/70 rounded-lg py-3">
         <h1 class="text-red-700 border-b border-red-700 text-2xl p-2">Wazza Ink Tattoo</h1>
-        <p> Va astept intr-o locatie noua, curata, modern si profesional utilata, cu o atmosfera relaxata, deschisa
-          oricui isi doreste un tatuaj corporal la cel mai inalt nivel. Cel mai important de stiut in alegerea salonului
-          de tatuaj este ca Tatuajele si artistii tatuatori nu sunt toti la fel. Imaginea pe care o aveti in minte a
-          rezultatului finit, poate si se transforma intr-un cosmar de multe ori datorita neinspiratiei de a alege un
-          salon de tatuaje bun, cu lucrari pe gustul dvs. Un tatuaj poate inseamna o pata de cerneala pe piele, sau
-          poate insemna arta ce va fi admirata ca un tablou, de care ve-ti fi mandri si peste ani. Modul cel mai bun de
-          alegere a unui salon de tatuaj este rasfoirea portofoliului.</p>
-        <h2 class="text-red-700 border-b border-red-700 text-2xl m-2 p-2">Cum se realizeaza corect un tatuaj!</h2>
-        <p>
-          Pentru a realiza un tatuaj, un tatuator foloseste un aparat electric ce contine mici tuburi cu cerneala
-          atasate la ace sterilizate. Astfel, se injecteaza cerneala in piele, printr-o serie de mici rani punctate.
-          Totusi, stim ca celulele pielii se regenereaza constant.
+        <p class="mt-2"> Bine ai venit pe wazzainktattoo, unde pasiunea noastră pentru artă și design se întâlnește cu
+          dorința ta de a-ți exprima personalitatea prin tatuaj. Suntem mândri să fim un salon de tatuaje dedicat
+          creării unor opere de artă cu adevărat unice și personalizate, care îți vor rămâne alături pentru întreaga
+          viață.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-lg bg-black/70 rounded-lg py-3">
+        <img class="my-8" src="{% static 'images/decor1.jpg' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">De ce noi?</h2>
+        <p>În centrul afacerii noastre stau artiștii noștri tatuatori talentați, care împărtășesc o pasiune comună
+          pentru arta corpului și care își asumă angajamentul de a crea tatuaje de înaltă calitate pentru fiecare
+          client. Indiferent dacă ești în căutarea unui tatuaj mic și subtil sau a unei capodopere de artă în întregime,
+          suntem aici să te ajutăm să îți transformi ideile și visele în realitate.
         </p>
         <p>
-          <span class="font-bold underline">Atunci cum de un tatuaj este permanent?</span> <br> Pielea are trei
-          straturi: epiderma, derma si hipoderma. Cand este injectata in piele, cerneala se imprastie prin punctul de
-          insertie atat in derma cat si in hipoderma. Astfel, celulele epidermei, cele care se regenereaza, vindeca zona
-          lezata, dar cerneala ramane in straturile inferioare. Derma recunoaste cerneala ca fiind corp strain, insa
-          pentru ca nu se regenereaza precum epiderma, o blocheaza in celule, pentru a nu se imprastia in organism.
-          Un tatuaj facut corect nu ajunge in hipoderma, care ofera suport pentru cele doua straturi superioare. Daca
-          cerneala ajunge in hipoderma tatuajul nu va fi indeajuns de vizibil. Pe masura ce inaintezi in varsta,
-          cerneala tatuajului ar putea sa migreze mai adanc in derma, de aceea tatuajul isi va pierde din intensitate.
+          Pe site-ul nostru, poți explora portofoliile noastre de tatuaje și să găsești inspirație în designurile
+          noastre unice. Suntem mândri să oferim o gamă largă de opțiuni de tatuaje, de la cele clasice la cele mai
+          moderne și la cele mai avangardiste. Ne asigurăm că gama noastră de tatuaje este mereu actualizată, astfel
+          încât să putem satisface nevoile și preferințele tuturor clienților noștri.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-lg bg-black/70 rounded-lg py-3">
+        <img class="my-8" src="{% static 'images/decor3.jpg' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">Our Environment</h2>
+        <p>Pentru a ne asigura că fiecare tatuaj pe care îl creăm este la înălțimea așteptărilor tale, lucram cu cele
+          mai bune echipamente și cele mai avansate tehnologii disponibile. Folosim culori de înaltă calitate și ace
+          sterile, iar spațiul nostru de lucru este mereu curat și igienic, pentru a ne asigura că totul este pregătit
+          în cel mai bun mod posibil.
+        </p>
+        <p>
+          Suntem dedicați să îți oferim o experiență prietenoasă, personalizată și confortabilă. Echipa noastră îți stă
+          la dispoziție pentru a răspunde tuturor întrebărilor tale și pentru a te ajuta să îți îndeplinești dorințele.
+          Fie că ești un client nou sau unul fidel, ne străduim mereu să ne depășim așteptările, să oferim servicii de
+          înaltă calitate și să te facem să te simți ca acasă.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-lg bg-black/70 rounded-lg py-3">
+        <img class="my-8" src="{% static 'images/decor4.jpg' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">Our Work</h2>
+        <p>La noi, fiecare tatuaj este o operă de artă unică și personalizată, creată special pentru tine. Vino și
+          explorează opțiunile noastre de tatuaje sau programează o întâlnire cu unul dintre artiștii noștri pentru o
+          consultare personalizată. Vom lucra împreună pentru a crea tatuajul perfect pentru tine și pentru a-ți
+          îndeplini toate dorințele, într-un mod sigur, profesionist și creativ.
+        </p>
+        <p>
+          În plus, suntem dedicați să oferim cele mai bune servicii și prețuri pentru clienții noștri. Ne angajăm să
+          oferim cel mai bun raport calitate-preț pentru fiecare tatuaj pe care îl creăm, astfel încât să poți obține
+          tatuajul dorit, fără a compromite calitatea. De asemenea, suntem flexibili și deschiși la discuții în ceea ce
+          privește opțiunile de plată și planurile de finanțare, pentru a-ți face experiența cât mai ușoară și mai
+          accesibilă.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-lg bg-black/70 rounded-lg py-3">
+        <img class="my-8" src="{% static 'images/decor5.jpg' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">in the end</h2>
+        <p>În final, suntem pasionați de ceea ce facem și suntem mândri să oferim servicii de înaltă calitate clienților
+          noștri. Suntem recunoscători că putem fi alături de tine în această călătorie a transformării ideilor tale în
+          realitate. Vino și explorează site-ul nostru pentru a vedea portofoliul nostru de tatuaje și a găsi inspirație
+          pentru următorul tău tatuaj. Dacă ai întrebări sau dorești să programezi o întâlnire cu unul dintre artiștii
+          noștri, nu ezita să ne contactezi. Abia așteptăm să creăm împreună un tatuaj care să îți reprezinte
+          personalitatea și stilul de viață
         </p>
       </div>
     </div>
@@ -207,7 +263,7 @@
 
   {% endblock %}
 
-  <footer class="relative bg-gradient-to-r from-black to-red-900/30" aria-labelledby="footer-heading">
+  <footer class="relative bg-gray-800" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="px-5 py-12 mx-auto  lg:py-16 md:px-12 lg:px-20">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
