@@ -1,3 +1,4 @@
+{% load static %}
 <div class="font-nanum sticky top-0 z-20 w-full bg-gray-800">
   <div class=" flex max-w-screen-xl p-5 mx-auto items-center  justify-between md:justify-center  md:flex-row  md:px-6 lg:px-8">
     <div class="box-border">
@@ -5,7 +6,7 @@
       <a class=" md:px-4 text-white md:mt-0 hover:text-red-500 focus:outline-none  focus:shadow-outline box-border" href="{% url 'home:portofoliu' %}">Portofoliu</a>
     </div>
     <div class="z-20">
-      <a href="/"> <img src="static/images/WAZZA_INK_TATTOO_logo.webp" alt="logo" class="w-14 hover:w-16"></a>
+      <a href="/"> <img src="{% static 'images/WAZZA_INK_TATTOO_logo.webp' %}" alt="logo" class="w-14 hover:w-16"></a>
     </div>
     <div>
       <a class=" md:px-4 text-white md:mt-0 hover:text-red-500 focus:outline-none  focus:shadow-outline" href="{% url 'home:info' %}">Info</a>

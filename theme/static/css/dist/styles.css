@@ -759,6 +759,14 @@ select {
   left: 0px;
 }
 
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .right-5 {
   right: 1.25rem;
 }
@@ -767,20 +775,16 @@ select {
   top: 0px;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .top-10 {
   top: 2.5rem;
 }
 
 .top-9 {
   top: 2.25rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.bottom-full {
-  bottom: 100%;
 }
 
 .z-10 {
@@ -841,6 +845,10 @@ select {
   margin-bottom: 2rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -871,6 +879,10 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .box-border {
@@ -965,26 +977,6 @@ select {
   border-collapse: collapse;
 }
 
-.-translate-x-full {
-  --tw-translate-x: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-full {
-  --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-full {
-  --tw-translate-y: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-full {
-  --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1071,10 +1063,6 @@ select {
   justify-self: center;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1121,6 +1109,10 @@ select {
   border-color: transparent;
 }
 
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
 .bg-black\/70 {
   background-color: rgb(0 0 0 / 0.7);
 }
@@ -1128,6 +1120,11 @@ select {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .bg-gray-700\/50 {
@@ -1153,25 +1150,6 @@ select {
   background-color: transparent;
 }
 
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-black {
-  --tw-gradient-from: #000;
-  --tw-gradient-to: rgb(0 0 0 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-red-900\/30 {
-  --tw-gradient-to: rgb(127 29 29 / 0.3);
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1187,6 +1165,10 @@ select {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-4 {
@@ -1357,11 +1339,6 @@ select {
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
-.text-red-900 {
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1411,14 +1388,34 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.text-animation {
-  transform: translateX(-100%);
-  animation: text-animation 5s steps(20, end) 1s 1 normal both;
+.text-animation{
+  transform: translateX(-110%);
 }
 
-@keyframes text-animation {
+.text-animation-active::after{
+  content: url("../../svg/tattoo-machine.svg");
+}
+
+.text-animation-active {
+  animation: text-animation-active 5s steps(20, end) 1s 1 normal both;
+}
+
+.text-animation-right{
+  transform: translateX(110%);
+}
+
+.text-animation-right-active {
+  animation: text-animation-right-active 5s steps(20, end) 1s 1 normal both;
+}
+
+.text-animation-right-active::before{
+  content: url("../../svg/tattoo-machine.svg");
+  margin-left: 10px;
+}
+
+@keyframes text-animation-active {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
   }
 
   30%,
@@ -1432,7 +1429,27 @@ select {
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
+  }
+}
+
+@keyframes text-animation-right-active {
+  0% {
+    transform: translateX(110%);
+  }
+
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(110%);
   }
 }
 
@@ -1657,12 +1674,12 @@ select {
 }
 
 @media (min-width: 1024px) {
-  .lg\:m-5 {
-    margin: 1.25rem;
-  }
-
   .lg\:m-4 {
     margin: 1rem;
+  }
+
+  .lg\:m-5 {
+    margin: 1.25rem;
   }
 
   .lg\:ml-auto {
@@ -1675,6 +1692,10 @@ select {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:grid-cols-2 {
@@ -1728,17 +1749,17 @@ select {
     padding-bottom: 4rem;
   }
 
-  .lg\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
   .lg\:pr-8 {
     padding-right: 2rem;
   }
 
   .lg\:text-left {
     text-align: left;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
