@@ -1383,6 +1383,10 @@ select {
   background-size: cover;
 }
 
+.bg-center {
+  background-position: center;
+}
+
 .fill-white {
   fill: #fff;
 }

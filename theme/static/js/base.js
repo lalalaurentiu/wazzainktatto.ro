@@ -65,7 +65,7 @@ setTimeout(() => {
 const observerBackground  = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+            entry.target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest",});
         }
     });
 });
