@@ -1363,6 +1363,22 @@ select {
   background-image: url('../../images/background5.jpg');
 }
 
+.bg-\[url\(\'\.\.\/\.\.\/images\/background4\.web\'\)\] {
+  background-image: url('../../images/background4.web');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/background4\.webp\'\)\] {
+  background-image: url('../../images/background4.webp');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/background3\.webp\'\)\] {
+  background-image: url('../../images/background3.webp');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/background5\.webp\'\)\] {
+  background-image: url('../../images/background5.webp');
+}
+
 .bg-cover {
   background-size: cover;
 }
