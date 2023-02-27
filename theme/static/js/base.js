@@ -74,3 +74,5 @@ const elementsBackground = document.querySelectorAll(".background");
 elementsBackground.forEach(element => {
     observerBackground.observe(element);
 });
+
+
