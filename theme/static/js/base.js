@@ -61,3 +61,16 @@ animation(textAnimation, "text-animation", "text-animation-active");
 setTimeout(() => {
     animation(textAnimationRight, "text-animation-right", "text-animation-right-active");
 }, 30000);
+
+const observerBackground  = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        }
+    });
+});
+
+const elementsBackground = document.querySelectorAll(".background");
+elementsBackground.forEach(element => {
+    observerBackground.observe(element);
+});
