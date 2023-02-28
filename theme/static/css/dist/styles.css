@@ -1029,10 +1029,6 @@ select {
   place-content: center;
 }
 
-.items-end {
-  align-items: flex-end;
-}
-
 .items-center {
   align-items: center;
 }
@@ -1453,6 +1449,12 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@font-face {
+  font-family: "Creepster";
+
+  src: url("../../fonts/Creepster-Regular.ttf");
+}
+
 .text-animation{
   transform: translateX(-110%);
 }
@@ -1516,6 +1518,10 @@ select {
   100% {
     transform: translateX(110%);
   }
+}
+
+.body{
+  scroll-behavior: smooth !important;
 }
 
 @media (min-width: 768px) {
@@ -1743,6 +1749,14 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .lg\:sticky {
+    position: sticky;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
+  }
+
   .lg\:m-4 {
     margin: 1rem;
   }
@@ -1777,10 +1791,6 @@ select {
 
   .lg\:place-content-start {
     place-content: start;
-  }
-
-  .lg\:items-end {
-    align-items: flex-end;
   }
 
   .lg\:justify-end {
