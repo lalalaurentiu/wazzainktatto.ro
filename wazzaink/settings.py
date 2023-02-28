@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django_browser_reload',
 
     #scheduler
-    'django_apscheduler',
+    #'django_apscheduler',
 
     #cleanning files
     'django_cleanup.apps.CleanupConfig',

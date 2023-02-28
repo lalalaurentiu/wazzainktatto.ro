@@ -44,7 +44,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "nanum": ["Nanum Myeongjo", "sans-serif"],
+                "nanum": ["'Nanum Myeongjo'", "sans-serif"],
+                "creepster": ["Creepster", "sans-serif"],
             },
         },
     },
