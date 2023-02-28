@@ -1,0 +1,83 @@
+{% load static %}
+<section id="contact" class="hidden text-white bg-gray-700/50 sticky top-14 w-screen h-screen z-10">
+    <div class="container mx-auto items-center px-5 py-12 lg:px-20">
+      <div class=" flex flex-col w-full max-w-xl p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-gray-900 rounded-lg md:mt-0">
+        <div class="flex w-full">
+          <h3 class="text-red-500">Rezervare</h3>
+          <button id="contactBtn" class="absolute right-5 top-9 text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-5" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="mt-8">
+          <div class="mt-6">
+            <form method="POST" enctype="multipart/form-data" class="space-y-6">
+              {% csrf_token %}
+              <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                <div>
+                  <label class="block text-sm font-medium text-neutral-600"> Nume </label>
+                  <div class="mt-1">
+                    {{ form.name }}
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <label class="block text-sm font-medium text-neutral-600"> Email </label>
+                  <div class="mt-1">
+                    {{ form.email }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                <div>
+                  <label class="block text-sm font-medium text-neutral-600"> Telefon </label>
+                  <div class="mt-1">
+                    {{ form.phone }}
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <label class="block text-sm font-medium text-neutral-600"> Data </label>
+
+                  <div x-data
+                    x-init="flatpickr($refs.datetimewidget, {wrap: true, enableTime: true,time_24hr: true , dateFormat: 'j m, Y H:i'});"
+                    x-ref="datetimewidget" class="flatpickr container mx-auto col-span-6 sm:col-span-6 mt-5">
+                    <div class="flex align-middle align-content-center">
+                      {{ form.date }}
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-neutral-600"> Descriere </label>
+                {{ form.description }}
+              </div>
+
+              <div class="space-y-1">
+                <label class="block text-sm font-medium text-neutral-600"> Incarca o imagine </label>
+                <div class="mt-1">
+                  {{ form.image}}
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class=" flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-red-500 rounded-xl hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"> Trimite </button>
+              </div>
+            </form>
+            <div class="relative my-4">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-red-500"></div>
+              </div>
+              <div class="relative flex justify-center text-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -42,7 +42,12 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                "nanum": ["'Nanum Myeongjo'", "sans-serif"],
+                "creepster": ["Creepster", "sans-serif"],
+            },
+        },
     },
     plugins: [
         /**

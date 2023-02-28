@@ -15,7 +15,7 @@ function touch_menu(){
     
 };
 
-navbar_btn.addEventListener("click", touch_menu, false);
+// navbar_btn.addEventListener("click", touch_menu, false);
 contact_btn.addEventListener("click", function (){
     contact.classList.remove("hidden");
     document.getElementById("id_email").value = cta_email.value;
@@ -24,3 +24,55 @@ contact_btn.addEventListener("click", function (){
 contactBtn.addEventListener("click", function (){contact.classList.add("hidden")})
 
 var year = document.getElementById("year").innerHTML = new Date().getFullYear();
+
+const observer  = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.replace("opacity-0", "opacity-100");
+        }
+    });
+});
+
+const elements = document.querySelectorAll(".animate");
+elements.forEach(element => {
+    observer.observe(element);
+});
+
+function animationPromise(element, replaceClass, activeClass){
+    return new Promise((resolve, reject) => {
+        element.classList.replace(replaceClass, activeClass);
+        setTimeout(() => {
+            resolve();
+        }, 10000);
+    });
+}
+
+async function animation(lst,replaceClass, activeClass){
+    for (let i = 0; i < lst.length; i++){
+        await animationPromise(lst[i],replaceClass, activeClass);
+    }
+}
+
+const textAnimation = document.querySelectorAll(".text-animation");
+const textAnimationRight = document.querySelectorAll(".text-animation-right");
+
+animation(textAnimation, "text-animation", "text-animation-active");
+
+setTimeout(() => {
+    animation(textAnimationRight, "text-animation-right", "text-animation-right-active");
+}, 30000);
+
+const observerBackground  = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest",});
+        }
+    });
+});
+
+const elementsBackground = document.querySelectorAll(".background");
+elementsBackground.forEach(element => {
+    observerBackground.observe(element);
+});
+
+
