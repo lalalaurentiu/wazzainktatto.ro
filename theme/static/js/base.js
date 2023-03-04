@@ -38,20 +38,6 @@ elements.forEach(element => {
     observer.observe(element);
 });
 
-function animationPromise(element, replaceClass, activeClass){
-    return new Promise((resolve, reject) => {
-        element.classList.replace(replaceClass, activeClass);
-        setTimeout(() => {
-            resolve();
-        }, 10000);
-    });
-}
-
-async function animation(lst,replaceClass, activeClass){
-    for (let i = 0; i < lst.length; i++){
-        await animationPromise(lst[i],replaceClass, activeClass);
-    }
-}
 
 const textAnimation = document.querySelectorAll(".text-animation");
 const textAnimationRight = document.querySelectorAll(".text-animation-right");
