@@ -799,6 +799,14 @@ select {
   margin: 1rem;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
+.m-0\.5 {
+  margin: 0.125rem;
+}
+
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -833,12 +841,20 @@ select {
   margin-bottom: 2.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mt-1 {
@@ -873,6 +889,22 @@ select {
   margin-top: 2rem;
 }
 
+.mr-0 {
+  margin-right: 0px;
+}
+
+.mr-0\.5 {
+  margin-right: 0.125rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-0\.5 {
+  margin-bottom: 0.125rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -905,12 +937,20 @@ select {
   display: none;
 }
 
+.h-1\/5 {
+  height: 20%;
+}
+
 .h-10 {
   height: 2.5rem;
 }
 
 .h-24 {
   height: 6rem;
+}
+
+.h-4\/6 {
+  height: 66.666667%;
 }
 
 .h-5 {
@@ -953,12 +993,28 @@ select {
   width: 1.5rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-2\/4 {
+  width: 50%;
 }
 
 .min-w-0 {
@@ -1005,6 +1061,10 @@ select {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1015,6 +1075,10 @@ select {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -1067,8 +1131,26 @@ select {
   justify-self: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -1087,12 +1169,24 @@ select {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
+}
+
+.border-r-8 {
+  border-right-width: 8px;
 }
 
 .border-red-500 {
@@ -1107,6 +1201,11 @@ select {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -1165,6 +1264,34 @@ select {
   background-image: url('../../images/background5.webp');
 }
 
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner\.jpg\'\)\] {
+  background-image: url('../../images/banner.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner2\.jpg\'\)\] {
+  background-image: url('../../images/banner2.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner3\.jpg\'\)\] {
+  background-image: url('../../images/banner3.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner4\.jpg\'\)\] {
+  background-image: url('../../images/banner4.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner5\.jpg\'\)\] {
+  background-image: url('../../images/banner5.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner6\.jpg\'\)\] {
+  background-image: url('../../images/banner6.jpg');
+}
+
+.bg-\[url\(\'\.\.\/\.\.\/images\/banner7\.jpg\'\)\] {
+  background-image: url('../../images/banner7.jpg');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1175,16 +1302,6 @@ select {
 
 .fill-white {
   fill: #fff;
-}
-
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.object-left {
-  -o-object-position: left;
-     object-position: left;
 }
 
 .p-1 {
@@ -1245,10 +1362,6 @@ select {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
 }
 
 .text-left {
@@ -1428,10 +1541,6 @@ select {
   transition-duration: 150ms;
 }
 
-.delay-150 {
-  transition-delay: 150ms;
-}
-
 .delay-300 {
   transition-delay: 300ms;
 }
@@ -1458,73 +1567,8 @@ select {
   src: url("../../fonts/Creepster-Regular.ttf");
 }
 
-.text-animation{
-  transform: translateX(-110%);
-}
-
-.text-animation-active::after{
-  content: url("../../svg/tattoo-machine.svg");
-}
-
-.text-animation-active {
-  animation: text-animation-active 5s steps(20, end) 1s 1 normal both;
-}
-
-.text-animation-right{
-  transform: translateX(110%);
-}
-
-.text-animation-right-active {
-  animation: text-animation-right-active 5s steps(20, end) 1s 1 normal both;
-}
-
-.text-animation-right-active::before{
-  content: url("../../svg/tattoo-machine.svg");
-  margin-left: 10px;
-}
-
-@keyframes text-animation-active {
-  0% {
-    transform: translateX(-110%);
-  }
-
-  30%,
-  40%,
-  50%,
-  60%,
-  70%,
-  80%,
-  90% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-110%);
-  }
-}
-
-@keyframes text-animation-right-active {
-  0% {
-    transform: translateX(110%);
-  }
-
-  30%,
-  40%,
-  50%,
-  60%,
-  70%,
-  80%,
-  90% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(110%);
-  }
-}
-
-.body{
-  scroll-behavior: smooth !important;
+* {
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -1563,11 +1607,23 @@ select {
   }
 }
 
+.hover\:h-4\/6:hover {
+  height: 66.666667%;
+}
+
+.hover\:h-full:hover {
+  height: 100%;
+}
+
+.hover\:h-2\/3:hover {
+  height: 66.666667%;
+}
+
 .hover\:w-16:hover {
   width: 4rem;
 }
 
-.hover\:w-4\/6:hover {
+.hover\:w-2\/3:hover {
   width: 66.666667%;
 }
 
@@ -1760,14 +1816,6 @@ select {
 }
 
 @media (min-width: 1024px) {
-  .lg\:sticky {
-    position: sticky;
-  }
-
-  .lg\:top-0 {
-    top: 0px;
-  }
-
   .lg\:m-4 {
     margin: 1rem;
   }
@@ -1784,8 +1832,44 @@ select {
     margin-top: 2.5rem;
   }
 
+  .lg\:mr-2 {
+    margin-right: 0.5rem;
+  }
+
+  .lg\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:h-1\/3 {
+    height: 33.333333%;
+  }
+
+  .lg\:h-1\/4 {
+    height: 25%;
+  }
+
+  .lg\:w-1\/5 {
+    width: 20%;
+  }
+
+  .lg\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .lg\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:grid-cols-2 {
@@ -1794,6 +1878,10 @@ select {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
   }
 
   .lg\:place-content-start {
@@ -1846,6 +1934,32 @@ select {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:hover\:h-full:hover {
+    height: 100%;
+  }
+
+  .lg\:hover\:h-2\/3:hover {
+    height: 66.666667%;
+  }
+
+  .lg\:hover\:w-4\/6:hover {
+    width: 66.666667%;
+  }
+
+  .lg\:hover\:w-full:hover {
+    width: 100%;
   }
 }
 
