@@ -38,41 +38,17 @@ elements.forEach(element => {
     observer.observe(element);
 });
 
-function animationPromise(element, replaceClass, activeClass){
-    return new Promise((resolve, reject) => {
-        element.classList.replace(replaceClass, activeClass);
-        setTimeout(() => {
-            resolve();
-        }, 10000);
-    });
-}
+let lastScrollTop = 0;
+window.addEventListener("scroll", function(){
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    let navbar = document.getElementById("navbar");
 
-async function animation(lst,replaceClass, activeClass){
-    for (let i = 0; i < lst.length; i++){
-        await animationPromise(lst[i],replaceClass, activeClass);
+    if (st > lastScrollTop){
+        navbar.classList.remove("sticky");
+    } else {
+        navbar.classList.add("sticky");
     }
-}
-
-const textAnimation = document.querySelectorAll(".text-animation");
-const textAnimationRight = document.querySelectorAll(".text-animation-right");
-
-animation(textAnimation, "text-animation", "text-animation-active");
-
-setTimeout(() => {
-    animation(textAnimationRight, "text-animation-right", "text-animation-right-active");
-}, 30000);
-
-const observerBackground  = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest",});
-        }
-    });
-});
-
-const elementsBackground = document.querySelectorAll(".background");
-elementsBackground.forEach(element => {
-    observerBackground.observe(element);
-});
+    lastScrollTop = st <= 0 ? 0 : st;
+}, false);
 
 

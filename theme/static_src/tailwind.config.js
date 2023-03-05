@@ -46,6 +46,9 @@ module.exports = {
             fontFamily: {
                 "nanum": ["'Nanum Myeongjo'", "sans-serif"],
                 "creepster": ["Creepster", "sans-serif"],
+                "bombing": ["'Bombing'", "sans-serif"],
+                "allura": ["'Allura'", "sans-serif"],
+                "signature": ["'Signature'", "sans-serif"],
             },
         },
     },

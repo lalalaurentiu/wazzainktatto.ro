@@ -1,17 +1,87 @@
 {% load static %}
-<div class="font-creepster h-screen w-screen box-border relative overflow-hidden background mb-10">
-    <video class="h-full w-full object-cover" autoplay muted>
-      <source src="{% static 'videos/cinematic.mp4' %}" type="video/mp4">
-    </video>
-    <div
-      class="absolute flex items-center top-9 text-white text-animation text-sm lg:text-xl lg:w-1/2 lg:m-4 bg-black/50 p-3">
-      <div class="mr-3">
-        WAZZA INK TATTO
+<div class="h-screen w-screen mb-10 sticky top-0">
+  <div class="w-full h-5/6 flex flex-col lg:flex-row items-center">
+    <div class="flex flex-col justify-center w-full h-4/6 lg:h-full m-0.5 lg:w-5/6 ">
+      <div class="flex lg:flex-col h-full">
+        <div
+          class="z-10 h-full lg:w-full w-1/4 lg:h-1/4 hover:flex-none hover:h-full hover:w-2/3 lg:hover:w-full lg:hover:h-2/3 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner5.jpg')] bg-cover bg-center">
+        </div>
+        <div
+          class="z-10 h-full lg:w-full w-1/4 lg:h-1/4 hover:flex-none hover:h-full hover:w-2/3 lg:hover:w-full lg:hover:h-2/3 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner6.jpg')] bg-cover bg-center">
+        </div>
+        <div
+          class="z-10 h-full lg:w-full w-1/4 lg:h-1/4 hover:flex-none hover:h-full hover:w-2/3 lg:hover:w-full lg:hover:h-2/3 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner7.jpg')] bg-cover bg-center">
+        </div>
+        <div
+          class="flex flex-col justify-center h-full text-white text-sm  background bg-[url('../../images/background.webp')] bg-cover bg-center">
+          <div class="bg-black/70 rounded-lg py-3">
+            <h1 class="text-red-700 border-b border-red-700 text-lg lg:text-3xl p-2 font-signature font-bold">Wazza Ink Tattoo</h1>
+            <p class="mt-2 text-xs lg:text-2xl overflow-ellipsis overflow-hidden p-1 font-allura"> Bine ai venit pe wazzainktattoo, unde
+              pasiunea noastră pentru artă și design se întâlnește cu
+              dorința ta de a-ți exprima personalitatea prin tatuaj. Suntem mândri să fim un salon de tatuaje dedicat
+              creării unor opere de artă cu adevărat unice și personalizate, care îți vor rămâne alături pentru întreaga
+              viață.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <div
-      class="absolute flex items-center top-1/2 text-white text-animation text-sm lg:text-xl lg:w-1/2 lg:m-4 bg-black/50 p-3">
-      <div class="mr-3">
+      class="z-10 box-border h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner2.jpg')] bg-cover bg-center">
+    </div>
+    <div
+      class="box-border h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner3.jpg')] bg-cover bg-center">
+    </div>
+    <div
+      class="box-border h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner4.jpg')] bg-cover bg-center">
+    </div>
+    <div
+      class="box-border h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 background bg-[url('../../images/banner.jpg')] bg-cover bg-center">
+    </div>
+  </div>
+  <div class="flex justify-center items-center mt-10 font-bombing lg:text-2xl">
+    <span class="mr-2">Urmareste-ne pe:</span>
+    <div class="mr-2">
+      <a href="https://www.facebook.com/Diaconeasa.Cristi" class="text-blue-500 hover:text-blue-700">
+        <span class="sr-only">Facebook</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="mr-2">
+      <a href="https://www.instagram.com/wazzainktattoo/" class="text-red-500 hover:text-red-700">
+        <span class="sr-only">Instagram</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="mr-2">
+      <a href="https://wa.me/+40741907328" class="text-green-500 hover:text-green-700">
+        <span class="sr-only">WhatsApp</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div
+  class="background bg-[url('../../images/background2.webp')] bg-cover bg-center h-screen w-screen mb-10 sticky top-0">
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-lg bg-black/50 rounded-lg py-3 mb-10">
+        <img class="my-8" src="{% static 'images/decor1.webp' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">De ce noi?</h2>
         <p>În centrul afacerii noastre stau artiștii noștri tatuatori talentați, care împărtășesc o pasiune comună
           pentru arta corpului și care își asumă angajamentul de a crea tatuaje de înaltă calitate pentru fiecare
           client. Indiferent dacă ești în căutarea unui tatuaj mic și subtil sau a unei capodopere de artă în întregime,
@@ -25,9 +95,16 @@
         </p>
       </div>
     </div>
-    <div
-      class="absolute flex items-center bottom-20 text-white text-animation text-sm lg:text-xl lg:w-1/2 lg:m-4 bg-black/50 p-3">
-      <div class="mr-3">
+  </div>
+</div>
+
+<div
+  class="background bg-[url('../../images/background3.webp')] bg-cover bg-center h-screen w-screen mb-10 sticky top-0">
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-md bg-black/50 rounded-lg py-3">
+        <img class="my-8" src="{% static 'images/decor3.webp' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">Our Environment</h2>
         <p>Pentru a ne asigura că fiecare tatuaj pe care îl creăm este la înălțimea așteptărilor tale, lucram cu cele
           mai bune echipamente și cele mai avansate tehnologii disponibile. Folosim culori de înaltă calitate și ace
           sterile, iar spațiul nostru de lucru este mereu curat și igienic, pentru a ne asigura că totul este pregătit
@@ -41,9 +118,16 @@
         </p>
       </div>
     </div>
-    <div
-      class="absolute flex items-center top-9 right-0 text-animation-right text-white text-sm lg:text-xl lg:w-1/2 lg:m-4 bg-black/50 p-3">
-      <div class="ml-3">
+  </div>
+</div>
+
+<div
+  class="background bg-[url('../../images/background4.webp')] bg-cover bg-center h-screen w-screen mb-10 sticky top-0">
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
+    <div class="grid lg:flex-row lg:space-x-12">
+      <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-lg bg-black/50 rounded-lg py-3">
+        <img class="my-8" src="{% static 'images/decor4.webp' %}" alt="">
+        <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">Our Work</h2>
         <p>La noi, fiecare tatuaj este o operă de artă unică și personalizată, creată special pentru tine. Vino și
           explorează opțiunile noastre de tatuaje sau programează o întâlnire cu unul dintre artiștii noștri pentru o
           consultare personalizată. Vom lucra împreună pentru a crea tatuajul perfect pentru tine și pentru a-ți
@@ -58,104 +142,12 @@
         </p>
       </div>
     </div>
-    <div
-      class="absolute flex items-center bottom-20 right-0 text-animation-right text-white  text-sm lg:text-xl lg:w-1/2 lg:m-4 bg-black/50 p-3">
-      <div class="ml-3">
-        <p>În final, suntem pasionați de ceea ce facem și suntem mândri să oferim servicii de înaltă calitate clienților
-          noștri. Suntem recunoscători că putem fi alături de tine în această călătorie a transformării ideilor tale în
-          realitate. Vino și explorează site-ul nostru pentru a vedea portofoliul nostru de tatuaje și a găsi inspirație
-          pentru următorul tău tatuaj. Dacă ai întrebări sau dorești să programezi o întâlnire cu unul dintre artiștii
-          noștri, nu ezita să ne contactezi. Abia așteptăm să creăm împreună un tatuaj care să îți reprezinte
-          personalitatea și stilul de viață
-        </p>
-      </div>
-    </div>
   </div>
+</div>
 
-  <div class="background bg-[url('../../images/background.webp')] bg-cover bg-center h-screen w-screen mb-10 lg:sticky lg:top-0">
-    <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
-      <div class="grid lg:flex-row lg:space-x-12">
-        <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-lg bg-black/50 rounded-lg py-3">
-          <h1 class="text-red-700 border-b border-red-700 text-2xl p-2">Wazza Ink Tattoo</h1>
-          <p class="mt-2"> Bine ai venit pe wazzainktattoo, unde pasiunea noastră pentru artă și design se întâlnește cu
-            dorința ta de a-ți exprima personalitatea prin tatuaj. Suntem mândri să fim un salon de tatuaje dedicat
-            creării unor opere de artă cu adevărat unice și personalizate, care îți vor rămâne alături pentru întreaga
-            viață.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="background bg-[url('../../images/background2.webp')] bg-cover bg-center h-screen w-screen mb-10 lg:sticky lg:top-0">
-    <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
-      <div class="grid lg:flex-row lg:space-x-12">
-        <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-lg bg-black/50 rounded-lg py-3 mb-10">
-          <img class="my-8" src="{% static 'images/decor1.webp' %}" alt="">
-          <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">De ce noi?</h2>
-          <p>În centrul afacerii noastre stau artiștii noștri tatuatori talentați, care împărtășesc o pasiune comună
-            pentru arta corpului și care își asumă angajamentul de a crea tatuaje de înaltă calitate pentru fiecare
-            client. Indiferent dacă ești în căutarea unui tatuaj mic și subtil sau a unei capodopere de artă în întregime,
-            suntem aici să te ajutăm să îți transformi ideile și visele în realitate.
-          </p>
-          <p>
-            Pe site-ul nostru, poți explora portofoliile noastre de tatuaje și să găsești inspirație în designurile
-            noastre unice. Suntem mândri să oferim o gamă largă de opțiuni de tatuaje, de la cele clasice la cele mai
-            moderne și la cele mai avangardiste. Ne asigurăm că gama noastră de tatuaje este mereu actualizată, astfel
-            încât să putem satisface nevoile și preferințele tuturor clienților noștri.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="background bg-[url('../../images/background3.webp')] bg-cover bg-center h-screen w-screen mb-10 lg:sticky lg:top-0">
-    <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
-      <div class="grid lg:flex-row lg:space-x-12">
-        <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-md bg-black/50 rounded-lg py-3">
-          <img class="my-8" src="{% static 'images/decor3.webp' %}" alt="">
-          <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">Our Environment</h2>
-          <p>Pentru a ne asigura că fiecare tatuaj pe care îl creăm este la înălțimea așteptărilor tale, lucram cu cele
-            mai bune echipamente și cele mai avansate tehnologii disponibile. Folosim culori de înaltă calitate și ace
-            sterile, iar spațiul nostru de lucru este mereu curat și igienic, pentru a ne asigura că totul este pregătit
-            în cel mai bun mod posibil.
-          </p>
-          <p>
-            Suntem dedicați să îți oferim o experiență prietenoasă, personalizată și confortabilă. Echipa noastră îți stă
-            la dispoziție pentru a răspunde tuturor întrebărilor tale și pentru a te ajuta să îți îndeplinești dorințele.
-            Fie că ești un client nou sau unul fidel, ne străduim mereu să ne depășim așteptările, să oferim servicii de
-            înaltă calitate și să te facem să te simți ca acasă.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="background bg-[url('../../images/background4.webp')] bg-cover bg-center h-screen w-screen mb-10 lg:sticky lg:top-0">
-    <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
-      <div class="grid lg:flex-row lg:space-x-12">
-        <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-lg bg-black/50 rounded-lg py-3">
-          <img class="my-8" src="{% static 'images/decor4.webp' %}" alt="">
-          <h2 class="text-red-700 border-b border-red-700 text-2xl my-2 p-2">Our Work</h2>
-          <p>La noi, fiecare tatuaj este o operă de artă unică și personalizată, creată special pentru tine. Vino și
-            explorează opțiunile noastre de tatuaje sau programează o întâlnire cu unul dintre artiștii noștri pentru o
-            consultare personalizată. Vom lucra împreună pentru a crea tatuajul perfect pentru tine și pentru a-ți
-            îndeplini toate dorințele, într-un mod sigur, profesionist și creativ.
-          </p>
-          <p>
-            În plus, suntem dedicați să oferim cele mai bune servicii și prețuri pentru clienții noștri. Ne angajăm să
-            oferim cel mai bun raport calitate-preț pentru fiecare tatuaj pe care îl creăm, astfel încât să poți obține
-            tatuajul dorit, fără a compromite calitatea. De asemenea, suntem flexibili și deschiși la discuții în ceea ce
-            privește opțiunile de plată și planurile de finanțare, pentru a-ți face experiența cât mai ușoară și mai
-            accesibilă.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="background bg-[url('../../images/background5.webp')] bg-cover bg-center h-screen w-screen mb-10 lg:sticky lg:top-0">
-    <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
+<div
+  class="background bg-[url('../../images/background5.webp')] bg-cover bg-center h-screen w-screen mb-10 sticky top-0">
+  <div class="transition duration-1000 ease-in-out w-full h-full mx-auto lg:px-32 opacity-0 animate flex items-center">
     <div class="grid lg:flex-row lg:space-x-12">
       <div class="relative px-4 mt-12 lg:px-10 text-white lg:m-4 text-sm lg:text-lg bg-black/50 rounded-lg py-3">
         <img class="my-8" src="{% static 'images/decor5.webp' %}" alt="">
@@ -170,4 +162,4 @@
       </div>
     </div>
   </div>
- </div>
+</div>
