@@ -38,5 +38,17 @@ elements.forEach(element => {
     observer.observe(element);
 });
 
+let lastScrollTop = 0;
+window.addEventListener("scroll", function(){
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    let navbar = document.getElementById("navbar");
+
+    if (st > lastScrollTop){
+        navbar.classList.remove("sticky");
+    } else {
+        navbar.classList.add("sticky");
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+}, false);
 
 

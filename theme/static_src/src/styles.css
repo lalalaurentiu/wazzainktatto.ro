@@ -9,6 +9,36 @@
   font-family: "Creepster";
   src: url("../../fonts/Creepster-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Bombing";
+  src: url("../../fonts/Bombing.ttf");
+}
+
+@font-face {
+  font-family: "Allura";
+  src: url("../../fonts/Allura-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Signature";
+  src: url("../../fonts/Four-Signature.ttf");
+}
+
 * {
   box-sizing: border-box;
+}
+
+.rollingOut {
+  animation: rollingOut 1s;
+
+}
+
+@keyframes rollingOut {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
