@@ -30,15 +30,33 @@
 }
 
 .rollingOut {
-  animation: rollingOut 1s;
+  position: relative;
+  animation: rollingOut 2s forwards;
+}
 
+.rollingIn {
+  position: relative;
+  animation: rollingIn 2s forwards;
 }
 
 @keyframes rollingOut {
   0% {
     transform: rotate(0deg);
+    left: 0;
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1080deg);
+    left: calc(50vw - 100%);
+  }
+}
+
+@keyframes rollingIn {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50vw - 100%);
+  }
+  100% {
+    transform: rotate(-1080deg);
+    left: 0;
   }
 }

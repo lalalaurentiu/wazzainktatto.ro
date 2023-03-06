@@ -759,10 +759,6 @@ select {
   left: 0px;
 }
 
-.left-1\/2 {
-  left: 50%;
-}
-
 .right-5 {
   right: 1.25rem;
 }
@@ -789,10 +785,6 @@ select {
 
 .z-20 {
   z-index: 20;
-}
-
-.z-30 {
-  z-index: 30;
 }
 
 .col-span-6 {
@@ -863,10 +855,6 @@ select {
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .mr-0 {
@@ -1031,16 +1019,6 @@ select {
 
 .border-collapse {
   border-collapse: collapse;
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-0 {
-  --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -1531,16 +1509,8 @@ select {
   transition-duration: 500ms;
 }
 
-.duration-700 {
-  transition-duration: 700ms;
-}
-
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 @font-face {
@@ -1572,16 +1542,36 @@ select {
 }
 
 .rollingOut {
-  animation: rollingOut 1s;
+  position: relative;
+  animation: rollingOut 2s forwards;
+}
+
+.rollingIn {
+  position: relative;
+  animation: rollingIn 2s forwards;
 }
 
 @keyframes rollingOut {
   0% {
     transform: rotate(0deg);
+    left: 0;
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1080deg);
+    left: calc(50vw - 100%);
+  }
+}
+
+@keyframes rollingIn {
+  0% {
+    transform: rotate(0deg);
+    left: calc(50vw - 100%);
+  }
+
+  100% {
+    transform: rotate(-1080deg);
+    left: 0;
   }
 }
 

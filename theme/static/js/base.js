@@ -38,17 +38,60 @@ elements.forEach(element => {
     observer.observe(element);
 });
 
-let lastScrollTop = 0;
-window.addEventListener("scroll", function(){
-    let st = window.pageYOffset || document.documentElement.scrollTop;
-    let navbar = document.getElementById("navbar");
+let navbar = document.getElementById("navbar");
+let logo = document.getElementById("logo");
+let logoBtn = document.getElementById("logo-btn");
+let navSide = document.querySelectorAll(".nav-side");
 
-    if (st > lastScrollTop){
-        navbar.classList.remove("sticky");
-    } else {
-        navbar.classList.add("sticky");
+
+let navState = {
+    active:function(){
+        logo.classList.add("rollingOut");
+        logo.classList.remove("rollingIn");
+        navbar.classList.remove("bg-black");
+        navSide.forEach(function(item){
+            item.classList.add("hidden");
+        });
+    },
+    inactive:function(){
+        logo.classList.remove("rollingOut");
+        logo.classList.add("rollingIn");
+        setTimeout(function(){
+            navbar.classList.add("bg-black");
+            navSide.forEach(function(item){
+                item.classList.remove("hidden");
+            }, 3000);
+        });
     }
-    lastScrollTop = st <= 0 ? 0 : st;
+}
+
+let state = false;
+
+function showNav(){
+    navState.inactive();
+    setTimeout(function(){
+        logoBtn.setAttribute("href", "/");
+    }, 500);
+    state = false;
+}
+
+
+window.addEventListener("scroll", function(){
+    let st = window.pageYOffset 
+    
+    if (st > 0 && state == false){
+        console.log("active");
+        state = true;
+        navState.active();
+        logoBtn.removeAttribute("href");
+        logoBtn.addEventListener("click", showNav, false);
+        logoBtn.addEventListener("touchstart", showNav, false);
+    } else if (st == 0 && state == true) {
+        console.log("inactive");
+        navState.inactive();
+        logoBtn.setAttribute("href", "/");
+        state = false;
+    }
 }, false);
 
 
