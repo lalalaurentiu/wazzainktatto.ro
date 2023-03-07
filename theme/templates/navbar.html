@@ -1,12 +1,12 @@
 {% load static %}
-<div id="navbar" class="font-bombing top-0 z-20 w-full h-24 bg-black transition-all transform translate-y-0 duration-700 ease-in-out overflow-hidden ">
-  <div class="h-24 flex max-w-screen-xl p-5 mx-auto items-center justify-between md:justify-center md:flex-row md:px-6 lg:px-8 lg:text-2xl">
+<div id="navbar" class="sticky font-bombing top-0 z-20 w-full h-24 bg-black overflow-hidden ">
+  <div class="h-24 flex max-w-screen-xl p-5 mx-auto items-center justify-center md:flex-row  md:px-6 lg:px-8 lg:text-2xl">
     <div class="nav-side">
       <a class=" px-2 md:mt-0 hover:text-yellow-300 focus:outline-none focus:shadow-outline box-border" href="{% url 'home:about'%}">Despre</a>
-      <a class=" md:px-4 md:mt-0 hover:text-yellow-300 focus:outline-none focus:shadow-outline box-border" href="{% url 'home:portofoliu' %}">Portofoliu</a>
+      <a class=" md:px-6 md:mt-0 hover:text-yellow-300 focus:outline-none focus:shadow-outline box-border" href="{% url 'home:portofoliu' %}">Portofoliu</a>
     </div>
-    <div class="z-20 w-16">
-      <a  href="/"> <img src="{% static 'images/WAZZA_INK_TATTOO_logo.webp' %}" alt="logo" class="w-14 hover:w-16"></a>
+    <div class="z-20 w-16 flex justify-center">
+      <a id="logo-btn" href="/"> <img id="logo" src="{% static 'images/WAZZA_INK_TATTOO_logo.webp' %}" alt="logo" class="w-14 hover:w-16"></a>
     </div>
     <div class="nav-side">
       <a class=" md:px-4 md:mt-0 hover:text-yellow-300 focus:outline-none focus:shadow-outline" href="{% url 'home:info' %}">Info</a>
