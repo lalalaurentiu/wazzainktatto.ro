@@ -42,23 +42,23 @@
     {% include 'homebase.html' %}
   {% endblock %}
   {% block script %} {% endblock %}
-  
+
   {% include 'footer.html' %}
   
   {% if messages %}
-  {% for message in messages %}
-  {% if message.tags %}
-  <script>
-    Swal.fire({
-      position: 'top-center',
-      icon: '{{ message.tags }}',
-      title: '{{ message }}',
-      showConfirmButton: true,
-      timer: 10000
-    })
-  </script>
-  {% endif %}
-  {% endfor %}
+    {% for message in messages %}
+      {% if message.tags %}
+        <script>
+          Swal.fire({
+            position: 'top-center',
+            icon: '{{ message.tags }}',
+            title: '{{ message }}',
+            showConfirmButton: true,
+            timer: 10000
+          })
+        </script>
+      {% endif %}
+    {% endfor %}
   {% endif %}
   
 </body>

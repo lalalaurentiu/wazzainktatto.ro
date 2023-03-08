@@ -1,134 +1,100 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block header %}
-
-{% endblock %}
+{% block header %}{% endblock %}
 
 {% block content %}
+<img class="absolute object-cover w-full h-full bottom-0" src="{% static 'images/skull.webp' %}" alt="skull" loading="lazy">
+<section class="z-10 text-white">
+    <div class="lg:py-12 ">
+        <div class="w-full lg:max-w-xl lg:mx-auto p-2 lg:p-10 bg-neutral-800/50 rounded-lg md:mt-0">
+            <h3 class="text-red-500">Rezervare</h3>
+            <div class="mt-8">
+                <div class="mt-6">
+                    <form method="POST" enctype="multipart/form-data" class="space-y-6">
+                        {% csrf_token %}
+                        <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                            <div>
+                                <label class="block text-sm font-medium">
+                                    Nume
+                                </label>
+                                <div class="mt-1">
+                                    {{ form.name }}
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="block text-sm font-medium">
+                                    Email
+                                </label>
+                                <div class="mt-1">
+                                    {{ form.email }}
+                                </div>
+                            </div>
+                        </div>
 
-<section class="text-white">
-  <div class="container mx-auto items-center px-5 py-12 lg:px-20">
-    <div class="
-  flex flex-col
-  w-full
-  max-w-xl
-  p-10
-  mx-auto
-  my-6
-  transition
-  duration-500
-  ease-in-out
-  transform
-  bg-gray-900
-  rounded-lg
-  md:mt-0
-">
-<h3 class="text-red-500">Rezervare</h3>
-      <div class="mt-8">
-        <div class="mt-6">
-          <form method="POST" enctype="multipart/form-data" class="space-y-6">
-            {% csrf_token %}
-            <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium text-neutral-600"> Nume </label>
-                <div class="mt-1">
-                  {{ form.name }}
+                        <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
+                            <div>
+                                <label class="block text-sm font-medium">
+                                    Telefon
+                                </label>
+                                <div class="mt-1">
+                                    {{ form.phone }}
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="block text-sm font-medium">
+                                    Data
+                                </label>
+
+                                <div class="mt-1">
+                                        {{ form.date }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium">
+                                Descriere
+                            </label>
+                            {{ form.description }}
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="block text-sm font-medium">
+                                Incarca o imagine
+                            </label>
+                            <div class="mt-1">
+                                {{ form.image}}
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" class=" flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-red-500 rounded-xl hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Trimite
+                            </button>
+                        </div>
+                    </form>
+                    <div class="relative my-4">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-red-500"></div>
+                        </div>
+
+                        <div class="relative flex justify-center text-sm"></div>
+                    </div>
+                    <div id="message" class="w-full">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class=" p-5 text-sm font-bold text-red-500 text-center">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
                 </div>
-              </div>
-              <div class="space-y-1">
-                <label class="block text-sm font-medium text-neutral-600"> Email </label>
-                <div class="mt-1">
-                  {{ form.email }}
-                </div>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 gap-2 lg:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium text-neutral-600"> Telefon </label>
-                <div class="mt-1">
-                  {{ form.phone }}
-                </div>
-              </div>
-              <div class="space-y-1">
-                <label class="block text-sm font-medium text-neutral-600"> Data </label>
-
-                <div
-    x-data
-    x-init="flatpickr($refs.datetimewidget, {wrap: true, enableTime: true,time_24hr: true , dateFormat: 'j m, Y H:i'});"
-    x-ref="datetimewidget"
-    class="flatpickr container mx-auto col-span-6 sm:col-span-6 mt-5"
->
-    <div class="flex align-middle align-content-center">
-      {{ form.date }}
-    </div>
-
-</div>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-neutral-600"> Descriere </label>
-              {{ form.description }}
-            </div>
-
-            <div class="space-y-1">
-              <label class="block text-sm font-medium text-neutral-600"> Incarca o imagine </label>
-              <div class="mt-1">
-                {{ form.image}}
-              </div>
-            </div>
-
-            <div>
-              <button type="submit" class="
-            flex
-            items-center
-            justify-center
-            w-full
-            px-10
-            py-4
-            text-base
-            font-medium
-            text-center text-white
-            transition
-            duration-500
-            ease-in-out
-            transform
-            bg-red-500
-            rounded-xl
-            hover:bg-red-700
-            focus:outline-none
-            focus:ring-2
-            focus:ring-offset-2
-            focus:ring-blue-500
-          "> Trimite </button>
-            </div>
-          </form>
-          <div class="relative my-4">
-            <div class="absolute inset-0 flex items-center">
-              <div class="w-full border-t border-red-500"></div>
-            </div>
-            
-            <div class="relative flex justify-center text-sm">
-              
-            </div>
-          </div>
-          <div id="message" class="w-full">
-            {% if messages %}
-              {% for message in messages %}
-              <div class=" p-5 text-sm font-bold text-red-500 text-center">
-                {{ message }}
-              </div>
-              {% endfor %}
-            {% endif %}
             </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
-
 
 
 {% endblock %}
