@@ -5,7 +5,7 @@ class ClientRezervationForm(forms.ModelForm):
     name = forms.CharField(label="Nume")
     email = forms.EmailField(label="Email")
     phone = forms.CharField(label="Telefon")
-    date = forms.DateTimeField(label="Data", input_formats=['%d %m, %Y %H:%M'])
+    date = forms.DateTimeField(label="Data", input_formats=['%d %m, %Y %H:%M'], widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
     description = forms.CharField(label="Introduceti o scurta descriere despre tatuaj...", widget=forms.Textarea, required=False)
     image = forms.ImageField(label="Incarca o imagine", required=False)
 
@@ -86,7 +86,7 @@ class ClientRezervationForm(forms.ModelForm):
 
     date.widget.attrs.update({
         "class":"""
-                block
+                flex
                 w-full
                 px-5
                 py-3
@@ -105,10 +105,10 @@ class ClientRezervationForm(forms.ModelForm):
                 focus:ring-white
                 focus:ring-offset-2
                 focus:ring-offset-red-300
+
                 """,
         "placeholder":"Selectati data",
-        "id":"datetime",
-        "data-input": None,
+        "id":"datetime"
     })
 
     description.widget.attrs.update({
