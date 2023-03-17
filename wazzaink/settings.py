@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 import os
 import mimetypes
 
@@ -31,7 +30,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.sites',
 
     #django apps
-    "home",
+    "home.apps.HomeConfig",
 
     #tailwind dependenci
     "tailwind",
@@ -56,6 +55,7 @@ INSTALLED_APPS = [
 
     #cleanning files
     'django_cleanup.apps.CleanupConfig',
+    "django.contrib.sitemaps",
 ]
 
 SCHEDULER_CONFIG = {
