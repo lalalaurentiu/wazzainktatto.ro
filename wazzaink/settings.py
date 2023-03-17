@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 import os
 import mimetypes
 
@@ -31,7 +30,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.sites',
 
     #django apps
-    "home",
+    "home.apps.HomeConfig",
 
     #tailwind dependenci
     "tailwind",
@@ -56,6 +55,7 @@ INSTALLED_APPS = [
 
     #cleanning files
     'django_cleanup.apps.CleanupConfig',
+    "django.contrib.sitemaps",
 ]
 
 SCHEDULER_CONFIG = {
@@ -183,5 +183,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = "587"
 EMAIL_HOST_USER = "inktattoo1992@gmail.com"
-EMAIL_HOST_PASSWORD = "aamifnpuufhurqgb"
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True 

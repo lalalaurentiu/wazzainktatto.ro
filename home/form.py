@@ -29,7 +29,7 @@ class ClientRezervationForm(forms.ModelForm):
                 focus:ring-2
                 focus:ring-white
                 focus:ring-offset-2
-                focus:ring-offset-red-300
+                focus:ring-offset-yellow-300
                 """,
         "placeholder":"Introduceti numele"
     })
@@ -54,7 +54,7 @@ class ClientRezervationForm(forms.ModelForm):
                 focus:ring-2
                 focus:ring-white
                 focus:ring-offset-2
-                focus:ring-offset-red-300
+                focus:ring-offset-yellow-300
                 """,
         "placeholder":"Introduceti email"
     })
@@ -79,7 +79,7 @@ class ClientRezervationForm(forms.ModelForm):
                 focus:ring-2
                 focus:ring-white
                 focus:ring-offset-2
-                focus:ring-offset-red-300
+                focus:ring-offset-yellow-300
                 """,
         "placeholder":"Introduceti numarul de telefon"
     })
@@ -104,7 +104,7 @@ class ClientRezervationForm(forms.ModelForm):
                 focus:ring-2
                 focus:ring-white
                 focus:ring-offset-2
-                focus:ring-offset-red-300
+                focus:ring-offset-yellow-300
 
                 """,
         "placeholder":"Selectati data",
@@ -131,7 +131,7 @@ class ClientRezervationForm(forms.ModelForm):
             focus:ring-2
             focus:ring-white
             focus:ring-offset-2
-            focus:ring-offset-red-300
+            focus:ring-offset-yellow-300
             apearance-none
             autoexpand""",
         "placeholder":"Observatii",
@@ -158,7 +158,7 @@ class ClientRezervationForm(forms.ModelForm):
               focus:ring-2
               focus:ring-white
               focus:ring-offset-2
-              focus:ring-offset-red-300
+              focus:ring-offset-yellow-300
                 """
     })
 

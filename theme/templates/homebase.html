@@ -1,11 +1,8 @@
 {% load static %}
 <div class="h-screen w-screen">
-    <div class="w-full h-full flex flex-col lg:flex-row items-center">
-        <div class="flex flex-col justify-center w-full h-4/6 lg:h-full m-0.5 lg:w-5/6 ">
+    <div class="w-full h-full flex lg:flex-row items-center">
+        <div class="hidden lg:flex flex-col justify-center m-w-1/2 h-4/6 lg:h-full m-0.5 lg:w-5/6 ">
             <div class="flex lg:flex-col h-full">
-                <div class="z-10 h-full lg:w-full w-1/4 lg:h-1/4 hover:flex-none hover:h-full hover:w-2/3 lg:hover:w-full lg:hover:h-2/3 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner5.jpg')] lg:bg-[url('../../images/banner5Rotate.jpg')] bg-cover bg-center"></div>
-                <div class="z-10 h-full lg:w-full w-1/4 lg:h-1/4 hover:flex-none hover:h-full hover:w-2/3 lg:hover:w-full lg:hover:h-2/3 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner6.jpg')] lg:bg-[url('../../images/banner6Rotate.jpg')] bg-cover bg-center"></div>
-                <div class="z-10 h-full lg:w-full w-1/4 lg:h-1/4 hover:flex-none hover:h-full hover:w-2/3 lg:hover:w-full lg:hover:h-2/3 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner7.jpg')] lg:bg-[url('../../images/banner7Rotate.jpg')] bg-cover bg-center"></div>
                 <div class="flex flex-col justify-center h-full text-white text-sm  background bg-[url('../../images/background.webp')] bg-cover bg-center">
                     <div class="bg-black/70 rounded-lg py-3">
                         <h1 class="text-yellow-300 border-b border-yellow-300 text-lg lg:text-3xl p-2 font-signature font-bold">Wazza Ink Tattoo</h1>
@@ -55,12 +52,12 @@
                 </div>
             </div>
         </div>
-        <div class="h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner2Rotate.jpg')] lg:bg-[url('../../images/banner2.jpg')] bg-cover bg-center"></div>
-        <div class="h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner3Rotate.jpg')] lg:bg-[url('../../images/banner3.jpg')] bg-cover bg-center"></div>
-        <div class="h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner4Rotate.jpg')] lg:bg-[url('../../images/banner4.jpg')] bg-cover bg-center"></div>
-        <div class="h-1/5 w-full lg:w-1/5 lg:h-full hover:flex-none hover:h-4/6 lg:hover:h-full lg:hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/bannerRotate.jpg')] lg:bg-[url('../../images/banner.jpg')] bg-cover bg-center"></div>
+        <div class=" w-full w-1/4 lg:w-1/4 h-full hover:flex-none hover:h-full hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner2.jpg')] bg-cover bg-center"></div>
+        <div class=" w-full w-1/4 lg:w-1/4 h-full hover:flex-none hover:h-full hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner3.jpg')] bg-cover bg-center"></div>
+        <div class=" w-full w-1/4 lg:w-1/4 h-full hover:flex-none hover:h-full hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner4.jpg')] bg-cover bg-center"></div>
+        <div class=" w-full w-1/4 lg:w-1/4 h-full hover:flex-none hover:h-full hover:w-4/6 transition-all duration-300 delay-300 ease-in-out mr-0.5 mb-0.5 lg:mr-2 lg:mb-2 bg-[url('../../images/banner.jpg')] bg-cover bg-center"></div>
     </div>
-    <a class="hidden lg:absolute bottom-2 lg:bottom-10 right-2 lg:right-10 p-2 bg-yellow-300 text-neutral-600 rounded hover:bg-yellow-400" href="{% url 'home:portofoliu' %}">Vezi Toata Galeria</a>
+    <a class="absolute bottom-2 lg:bottom-10 right-2 lg:right-10 p-2 bg-yellow-300 text-neutral-600 rounded hover:bg-yellow-400" href="{% url 'portofoliu' %}">Vezi Toata Galeria</a>
 </div>
 
 <div class="background bg-[url('../../images/background2.webp')] bg-cover bg-center h-screen w-screen mb-1">

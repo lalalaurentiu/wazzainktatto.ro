@@ -49,6 +49,7 @@ let navState = {
         logo.classList.add("rollingOut");
         logo.classList.remove("rollingIn");
         navbar.classList.remove("bg-black");
+        navbar.classList.replace("absolute", "fixed");
         navSide.forEach(function(item){
             item.classList.add("hidden");
         });
