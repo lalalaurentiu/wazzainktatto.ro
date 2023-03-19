@@ -43,12 +43,17 @@ let logo = document.getElementById("logo");
 let logoBtn = document.getElementById("logo-btn");
 let navSide = document.querySelectorAll(".nav-side");
 
+let path = window.location.pathname;
+if (path != "/"){
+    navbar.classList.replace("absolute", "sticky");
+}
 
 let navState = {
     active:function(){
         logo.classList.add("rollingOut");
         logo.classList.remove("rollingIn");
         navbar.classList.remove("bg-black");
+        navbar.classList.replace("fixed", "absolute");
         navbar.classList.replace("absolute", "fixed");
         navSide.forEach(function(item){
             item.classList.add("hidden");

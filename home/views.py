@@ -26,7 +26,3 @@ def info(request):
 def rezervare(request):
     template_name = "rezervare.html"
     return render(request, template_name)
-
-def errors(request):
-    template_name = "404.html"
-    return render(request, template_name)
