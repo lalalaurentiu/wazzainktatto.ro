@@ -1,0 +1,21 @@
+{% load static tailwind_tags %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% tailwind_css %}
+    <title>Error 500</title>
+</head>
+<body class="bg-black">
+    <div class="flex flex-col align-center justify-center w-screen h-screen text-white">
+        <h1 class="text-9xl text-center " >5 <img id="logo" width="200" height="200" src="{% static 'images/WAZZA_INK_TATTOO_logo.webp'%}" alt="logo" class="w-28 inline mb-10"> 0</h1>
+        <p class="text-center">Internal Server Error </p>
+        <div class="flex justify-center mt-2">
+             <a class="px-3 py-1 text-base font-medium text-neutral-600 bg-yellow-300 rounded-lg shadow hover:bg-yellow-500" href="{% url 'home' %}">Go Back</a>
+        </div>
+       
+    </div>
+</body>
+</html>
