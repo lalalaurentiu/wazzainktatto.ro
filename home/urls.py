@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import home, about, portofolio, info, rezervare
+from .views import (home, about, portofolio, info, rezervare, errors)
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 
@@ -15,4 +15,6 @@ urlpatterns = [
     path("rezervare/", rezervare, name="rezervare"),
     path("sitemap.xml", sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path("robots.txt", include("robots.urls")),
+    # path provizoriu
+    path("404/", errors, name="errors"),
 ]
