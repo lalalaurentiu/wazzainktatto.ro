@@ -28,5 +28,8 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+# handler404 = "wazzaink.views.page_not_found"
+# handler500 = "wazzaink.views.internal_server_error"
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

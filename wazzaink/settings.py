@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'django.contrib.sites',
+    'django.contrib.sites',
 
     #django apps
     "home.apps.HomeConfig",
@@ -56,8 +56,9 @@ INSTALLED_APPS = [
     #cleanning files
     'django_cleanup.apps.CleanupConfig',
     "django.contrib.sitemaps",
+    "robots",
 ]
-
+SITE_ID = 1
 SCHEDULER_CONFIG = {
     "apscheduler.jobstores.default": {
         "class": "django_apscheduler.jobstores:DjangoJobStore"
